@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter For You ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Opening Screen -->
+    <div id="openingScreen" class="screen active">
+        <div class="opening-container">
+            <div class="opening-content">
+                <h1 class="opening-title">✨ A Letter For You ✨</h1>
+                <p class="opening-subtitle">Open your heart 💕</p>
+                <button class="glowing-button" onclick="transitionToLetter()">
+                    Click Here, Babe ❤️
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Love Letter Screen -->
+    <div id="letterScreen" class="screen">
+        <!-- Rose Petal Animation -->
+        <div id="petalsContainer" class="petals-container"></div>
+
+        <!-- Music Control Button -->
+        <button id="musicToggle" class="music-button" onclick="toggleMusic()">
+            🎵 Music On
+        </button>
+
+        <!-- Decorative Elements -->
+        <div class="decoration decoration-1">🌹</div>
+        <div class="decoration decoration-2">🌹</div>
+        <div class="decoration decoration-3">🌸</div>
+        <div class="decoration decoration-4">🌸</div>
+        <div class="decoration decoration-5">🌷</div>
+        <div class="decoration decoration-6">🌷</div>
+
+        <!-- Couple Illustration Container -->
+        <div class="couple-section">
+            <div class="couple-illustration">
+                <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Girl -->
+                    <g id="girl">
+                        <!-- Head -->
+                        <circle cx="70" cy="50" r="25" fill="#f4b5a0"/>
+                        <!-- Hair -->
+                        <path d="M 45 50 Q 45 20 70 20 Q 95 20 95 50" fill="#8b6b47"/>
+                        <!-- Hair details -->
+                        <circle cx="50" cy="35" r="8" fill="#8b6b47"/>
+                        <circle cx="90" cy="35" r="8" fill="#8b6b47"/>
+                        <!-- Eyes -->
+                        <circle cx="60" cy="45" r="3" fill="#2c2c2c"/>
+                        <circle cx="80" cy="45" r="3" fill="#2c2c2c"/>
+                        <!-- Smile -->
+                        <path d="M 65 55 Q 70 60 75 55" stroke="#d4949f" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <!-- Cheeks -->
+                        <circle cx="50" cy="52" r="4" fill="#f0a9a9" opacity="0.6"/>
+                        <circle cx="90" cy="52" r="4" fill="#f0a9a9" opacity="0.6"/>
+                        <!-- Body -->
+                        <rect x="55" y="75" width="30" height="40" rx="5" fill="#f5d5e8"/>
+                        <!-- Arms -->
+                        <rect x="40" y="80" width="15" height="35" rx="7" fill="#f4b5a0"/>
+                        <rect x="85" y="80" width="15" height="35" rx="7" fill="#f4b5a0"/>
+                        <!-- Dress -->
+                        <path d="M 55 115 L 45 160 Q 70 170 85 160 L 85 115 Z" fill="#f5d5e8"/>
+                        <!-- Legs -->
+                        <rect x="60" y="160" width="8" height="25" fill="#f4b5a0"/>
+                        <rect x="72" y="160" width="8" height="25" fill="#f4b5a0"/>
+                    </g>
+
+                    <!-- Boy -->
+                    <g id="boy">
+                        <!-- Head -->
+                        <circle cx="130" cy="50" r="25" fill="#e8b8a0"/>
+                        <!-- Hair -->
+                        <path d="M 105 50 Q 105 20 130 20 Q 155 20 155 50" fill="#3d2817"/>
+                        <!-- Hair spikes -->
+                        <circle cx="110" cy="30" r="6" fill="#3d2817"/>
+                        <circle cx="150" cy="30" r="6" fill="#3d2817"/>
+                        <circle cx="130" cy="20" r="6" fill="#3d2817"/>
+                        <!-- Eyes -->
+                        <circle cx="120" cy="45" r="3" fill="#2c2c2c"/>
+                        <circle cx="140" cy="45" r="3" fill="#2c2c2c"/>
+                        <!-- Smile -->
+                        <path d="M 125 55 Q 130 60 135 55" stroke="#c9876f" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <!-- Body -->
+                        <rect x="115" y="75" width="30" height="40" rx="5" fill="#7fb3d5"/>
+                        <!-- Arms -->
+                        <rect x="100" y="80" width="15" height="35" rx="7" fill="#e8b8a0"/>
+                        <rect x="145" y="80" width="15" height="35" rx="7" fill="#e8b8a0"/>
+                        <!-- Pants -->
+                        <path d="M 115 115 L 110 160 Q 115 165 120 160 L 120 115 Z" fill="#4a4a4a"/>
+                        <path d="M 145 115 L 150 160 Q 145 165 140 160 L 140 115 Z" fill="#4a4a4a"/>
+                        <!-- Legs -->
+                        <rect x="112" y="160" width="6" height="25" fill="#e8b8a0"/>
+                        <rect x="142" y="160" width="6" height="25" fill="#e8b8a0"/>
+                    </g>
+
+                    <!-- Heart between them -->
+                    <path d="M 100 90 Q 95 85 90 85 Q 85 85 85 90 Q 85 95 100 108 Q 115 95 115 90 Q 115 85 110 85 Q 105 85 100 90 Z" fill="#ff6b9d"/>
+                </svg>
+                <div class="couple-roses">
+                    🌹 💕 🌹
+                </div>
+            </div>
+        </div>
+
+        <!-- Love Letter Content -->
+        <div class="letter-container">
+            <div class="letter-content">
+                <h2 class="letter-title">My Dearest Love 💕</h2>
+
+                <div class="letter-text">
+                    <p>Sometimes we have little arguments, and I know that's normal in a relationship. I'm truly sorry for every mistake I've made, and I promise myself I won't repeat them.</p>
+
+                    <p>You're such a good and loving person, and I love you so much. ❤️ I never want to hurt you. But sometimes, the things you say hurt me more deeply than you realize. My heart feels so heavy, and I end up thinking about your words for hours, sometimes even crying alone at night.</p>
+
+                    <p>I'm not blaming you🥺 I just want you to understand that I'm sensitive when it comes to you because you mean so much to me. When you're upset with me, it hurts me more than I can explain.</p>
+
+                    <p>Sometimes I get scared when we're not okay because I love you so much, and the thought of us being apart makes me really sad. I never want to put pressure on you. I just want us to talk to each other gently and understand each other.❤️</p>
+
+                    <p>I'm sorry, ayye. I love you so, so, so much. ❤️ I never thought I could love someone this deeply. I'm truly sorry again for everything I've done and for the times I've hurt you. I'll try my best to learn from my mistakes and be better for us.</p>
+
+                    <p>Please get well soon, take good care of yourself, and stay safe❤️</p>
+
+                    <p class="letter-closing">Adarei mage babata .... umma godak 💋💋💋 💋💫💫💫</p>
+                </div>
+
+                <div class="letter-signature">
+                    <p>Forever yours,</p>
+                    <p class="your-name">Your Girl 💖</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Element for Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://assets.mixkit.co/active_storage/sfx/2716/2716-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
